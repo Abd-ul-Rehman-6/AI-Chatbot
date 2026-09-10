@@ -253,6 +253,9 @@ body.menu-open {
     visibility: visible !important;
     opacity: 1 !important;
     margin-left: 10px !important;
+    z-index: 9999 !important;
+  position: relative !important;
+  cursor: pointer !important;
   }
 
   .nav-actions .login-btn {
