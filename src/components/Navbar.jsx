@@ -29,8 +29,8 @@ function Navbar({ onSignUpClick, onLoginClick }) {
       <header className="navbar">
         <div className="container nav-container">
 
-          {/* 1. Left Corner: Logo */}
-          <Link to="/" className="logo" onClick={closeMenu} style={{ textDecoration: 'none', color: 'inherit' }}>
+          {/* 1. Left Corner: Logo (Gap increased to 14px) */}
+          <Link to="/" className="logo" onClick={closeMenu} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '14px' }}>
             <div className="logo-icon">✦</div>
             <span>IX AI Chatbot</span>
           </Link>
@@ -61,13 +61,11 @@ function Navbar({ onSignUpClick, onLoginClick }) {
               aria-label="Toggle navigation"
             >
               {isMenuOpen ? (
-                /* Active State: Clean 'X' Close Icon */
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
               ) : (
-                /* Normal State: Thin & Sleek 3 Lines */
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="3" y1="6" x2="21" y2="6"></line>
                   <line x1="3" y1="12" x2="21" y2="12"></line>

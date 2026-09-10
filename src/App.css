@@ -233,15 +233,20 @@ body.menu-open {
 /*  MOBILE RESPONSIVE NAVIGATION BREAKPOINT*/
 
 @media screen and (max-width: 868px) {
+  
+  .logo {
+    gap: 14px !important;
+  }
+
   .logo span {
-    font-size: 17px; /* Mobile screens par logo text wrap na ho */
+    font-size: 16px;
   }
 
   .nav-header-right {
     display: flex !important;
     align-items: center !important;
     margin-left: auto !important;
-    gap: 8px !important;
+    gap: 4px !important;
     flex-shrink: 0 !important;
   }
 
@@ -250,19 +255,16 @@ body.menu-open {
     align-items: center !important;
     justify-content: center !important;
     margin: 0 !important;
-    padding: 6px !important;
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
-    min-height: 40px !important;
+    padding: 4px !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
     flex-shrink: 0 !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin-left: 6px !important;
+    margin-left: 2px !important; /* Buttons aur Hamburger ke beech ki jagah */
     z-index: 9999 !important;
     position: relative !important;
     cursor: pointer !important;
-    box-sizing: border-box !important;
   }
   .hamburger svg {
     display: block !important;
@@ -271,10 +273,16 @@ body.menu-open {
     pointer-events: none !important;
   }
 
+  .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important; /* Buttons ke aapas ka gap */
+  }
+
   .nav-actions .login-btn {
-    padding: 7px 12px;
+    padding: 6px 10px;
     font-size: 12px;
-   
+   margin-left: 0 !important;
   }
 
   .nav-actions .primary-btn {
