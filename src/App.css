@@ -237,7 +237,8 @@ body.menu-open {
     display: flex !important;
     align-items: center !important;
     margin-left: auto !important;
-    gap: 8px !important;
+    gap: 10px !important;
+
   }
 
   .hamburger {
@@ -251,11 +252,13 @@ body.menu-open {
     flex-shrink: 0 !important;
     visibility: visible !important;
     opacity: 1 !important;
+    margin-right:5px
   }
 
   .nav-actions .login-btn {
     padding: 7px 12px;
     font-size: 12px;
+    margin-left: 10px;
   }
 
   .nav-actions .primary-btn {
