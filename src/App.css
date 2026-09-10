@@ -252,7 +252,7 @@ body.menu-open {
     flex-shrink: 0 !important;
     visibility: visible !important;
     opacity: 1 !important;
-    margin-right:5px
+    margin-left: 10px !important;
   }
 
   .nav-actions .login-btn {
