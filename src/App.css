@@ -187,11 +187,6 @@ body.menu-open {
   z-index: 1001;
   border-radius: 9px;
   transition: background 0.2s ease, opacity 0.2s ease;
-  
-  /* Flex direction add karein taake bars stacked rahein */
-  flex-direction: column !important;
-  gap: 5px !important;
-  box-sizing: border-box !important;
 }
 
 .hamburger:hover {
@@ -202,15 +197,13 @@ body.menu-open {
   display: block;
 }
 
-/* HAR MOBILE DEVICE PAR BARS VISIBLE RAKHNE KE LIYE */
 .hamburger .bar {
-  display: block !important;
-  width: 24px !important; /* Percentage (%) ki bajaye fixed px dein */
-  height: 2px !important;
-  background-color: #0f172a !important;
-  border-radius: 4px !important;
-  transition: transform 0.3s ease, opacity 0.3s ease !important;
-  flex-shrink: 0 !important;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #0f172a;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hamburger.active .bar:nth-child(1) {
@@ -237,13 +230,19 @@ body.menu-open {
   z-index: 998;
 }
 
-/* MOBILE RESPONSIVE NAVIGATION BREAKPOINT */
+/*  MOBILE RESPONSIVE NAVIGATION BREAKPOINT*/
+
 @media screen and (max-width: 868px) {
+  .logo span {
+    font-size: 17px; /* Mobile screens par logo text wrap na ho */
+  }
+
   .nav-header-right {
     display: flex !important;
     align-items: center !important;
     margin-left: auto !important;
-    gap: 10px !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
   }
 
   .hamburger {
@@ -259,21 +258,27 @@ body.menu-open {
     flex-shrink: 0 !important;
     visibility: visible !important;
     opacity: 1 !important;
-    margin-left: 10px !important;
+    margin-left: 6px !important;
     z-index: 9999 !important;
     position: relative !important;
     cursor: pointer !important;
+    box-sizing: border-box !important;
   }
-}
+  .hamburger svg {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    pointer-events: none !important;
+  }
 
   .nav-actions .login-btn {
     padding: 7px 12px;
     font-size: 12px;
-    margin-left: 10px;
+   
   }
 
   .nav-actions .primary-btn {
-    padding: 7px 14px;
+    padding: 6px 12px;
     font-size: 12px;
   }
 
@@ -285,6 +290,7 @@ body.menu-open {
     transform: none;
     width: 100%;
     height: calc(100vh - 78px);
+    height: calc(100dvh - 78px);
     background: #ffffff;
     flex-direction: column;
     align-items: flex-start;
@@ -299,7 +305,7 @@ body.menu-open {
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-links a {
@@ -311,7 +317,7 @@ body.menu-open {
   .mobile-menu-actions {
     display: none !important;
   }
-
+}
 
 .auth-wrapper {
   min-height: 100vh;
